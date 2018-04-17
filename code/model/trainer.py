@@ -566,7 +566,7 @@ if __name__ == '__main__':
         trainer.test_environment.test_rollouts = 100
 
         trainer.test(sess, beam=True, print_paths=True, save_model=False)
-        print options['nell_evaluation']
+        print (options['nell_evaluation'])
         if options['nell_evaluation'] == 1:
             nell_eval(path_logger_file + "/" + "test_beam/" + "pathsanswers", trainer.data_input_dir+'/sort_test.pairs' )
 
